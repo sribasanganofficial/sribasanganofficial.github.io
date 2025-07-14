@@ -1,0 +1,8 @@
+User-agent: *
+Disallow:/search
+Disallow:/?updated-max=
+Disallow:/*&max-results=
+Disallow:/search/label/
+
+Allow:/
+Sitemap:https://sribasanganofficial/sitemap.xml
