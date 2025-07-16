@@ -1,64 +1,100 @@
-/* Reset and global styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* ==== GENERAL ==== */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  background-color: #fcfcfc;
-  color: #000000;
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
-/* Container */
-.container {
-  width: 90%;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-/* Header */
-.site-header {
-  background-color: #a37c40; /* Warm Bronze */
-  padding: 20px 0;
+header {
+  background-color: #a37c40;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
 }
 
 .header-container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
 }
 
 .logo {
-  height: 60px;
+  height: 80px; /* Enlarged logo */
+  margin-right: auto; /* Align to left */
 }
 
-.navbar .nav-links {
-  list-style: none;
+/* ==== NAVIGATION BAR ==== */
+ul {
+  padding-left: 2rem;
+}
+.nav-links {
   display: flex;
   gap: 20px;
-  flex-wrap: wrap;
+  list-style: none;
 }
 
-.navbar .nav-links li a {
-  color: #fcfcfc;
+.nav-links a {
+  color: white;
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
+  font-weight: bold;
 }
 
-.navbar .nav-links li a:hover {
-  color: #f4e409;
+/* ==== HAMBURGER MENU ==== */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  z-index: 1001;
+}
+
+.menu-toggle div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+}
+
+/* ==== MOBILE MENU ==== */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #a37c40;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%; /* Full width background */
+    display: none;
+    padding: 15px 5px;
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 10px 15px;
+    width: 100%;
+  }
 }
 
 /* About Section */
 .about-section {
   background-color: #f4e409; /* Bright Yellow */
   color: #000000;
-  padding: 60px 0;
+  padding: 60px 20px;
+  text-align: center;
+  margin-top: 100px;
 }
 
 .about-container {
@@ -90,6 +126,15 @@ body {
 .about-text p {
   font-size: 18px;
   line-height: 1.7;
+}
+
+/* ==== SECTION HEADERS ==== */
+#activities h2 {
+  color: #d7263d; /* Deep red */
+}
+
+#contact h2 {
+  color: #000000;
 }
 
 /* Weekly Satsang Section */
@@ -282,3 +327,4 @@ body {
     font-size: 16px;
   }
 }
+
