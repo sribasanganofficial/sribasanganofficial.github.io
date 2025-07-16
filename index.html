@@ -14,17 +14,21 @@
       <img src="https://i.ibb.co/23hStqkk/sribas-angan-logo.png" alt="Sribas Angan Logo" class="logo">
       
 <nav class="navbar">
-<button class="menu-toggle" id="menuToggle">
-    <span id="menuIcon">&#9776;</span> <!-- ☰ hamburger icon -->
-  </button>
+  <div class="navbar-container">
 
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#about">About</a></li>
-    <li><a href="#resources">Resources</a></li>
-    <li><a href="#activities">Activities</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+    <!-- Hamburger Button -->
+    <button class="hamburger" id="hamburger">&#9776;</button>
+
+    <!-- Navigation Links -->
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#resources">Resources</a></li>
+      <li><a href="#activities">Activities</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
 </nav>
+
 
     </div>
   </header>
@@ -113,13 +117,15 @@
     </div>
   </footer>
 <script>
-  const toggle = document.querySelector(".menu-toggle");
-  const nav = document.querySelector(".nav-links");
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("navLinks");
 
-  toggle.addEventListener("click", () => {
-    nav.classList.toggle("active");
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navLinks.classList.toggle("active");
   });
 </script>
+
 
 </body>
 </html>
