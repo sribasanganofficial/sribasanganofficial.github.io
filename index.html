@@ -12,16 +12,20 @@
   <header class="site-header">
     <div class="container header-container">
       <img src="https://i.ibb.co/23hStqkk/sribas-angan-logo.png" alt="Sribas Angan Logo" class="logo">
-      <nav class="navbar">
-        <ul class="nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#resources">Resources</a></li>
-          <li><a
-          <li><a href="#activities">Activities</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+      
+<nav class="navbar">
+<button class="menu-toggle" id="menuToggle">
+    <span id="menuIcon">&#9776;</span> <!-- ☰ hamburger icon -->
+  </button>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#resources">Resources</a></li>
+    <li><a href="#activities">Activities</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
     </div>
   </header>
 
@@ -108,6 +112,14 @@
       <p>&copy; 2025 Sribas Angan Bhakti Vriksha. All Rights Reserved.</p>
     </div>
   </footer>
+<script>
+  const toggle = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".nav-links");
+
+  toggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+</script>
 
 </body>
 </html>
